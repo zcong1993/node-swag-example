@@ -1,0 +1,49 @@
+{
+  "name": "swagger",
+  "description": "my go grpc project",
+  "repository": {
+    "url": "zcong1993/swagger",
+    "type": "git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "format": "prettier --write **/*.{js,json,md}",
+    "lint": "xo",
+    "precommit": "lint-staged"
+  },
+  "author": "zcong1993 <1005997919@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "kcors": "^2.2.1",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compose": "^4.0.0",
+    "koa-helmet": "^3.3.0",
+    "koa-logger": "^3.1.0",
+    "koa-onerror": "^4.0.0",
+    "koa-router": "^7.3.0",
+    "koa-static": "^5.0.0",
+    "koa2-swagger-ui": "^2.11.10"
+  },
+  "devDependencies": {
+    "@zcong/eslint-config-custom": "^0.1.1",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "extends": [
+      "@zcong/eslint-config-custom"
+    ],
+    "envs": [
+      "jest"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

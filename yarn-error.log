@@ -1,0 +1,75 @@
+Arguments: 
+  /Users/cong/.nvm/versions/node/v11.5.0/bin/node /Users/cong/.yarn/bin/yarn.js add koa2-swagger-ui
+
+PATH: 
+  /usr/local/opt/mysql-client/bin:/Users/cong/.nvm/versions/node/v11.5.0/bin:/Users/cong/.yarn/bin:/Users/cong/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/local/opt/libxml2/bin:/Users/cong/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/cong/.composer/vendor/bin:/Users/cong/bin:/Users/cong/.cargo/bin:/Users/cong/go/bin:/Users/cong/graalvm/Contents/Home/bin:/Users/cong/depot_tools:/Users/cong/flutter/bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  11.5.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/cong/zcong/test/swagger/package.json: Unexpected token , in JSON at position 637
+      at JSON.parse (<anonymous>)
+      at /Users/cong/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/cong/.yarn/lib/cli.js:304:30)
+      at /Users/cong/.yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "swagger",
+    "description": "my go grpc project",
+    "repository": {
+      "url": "zcong1993/swagger",
+      "type": "git"
+    },
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "format": "prettier --write **/*.{js,json,md}",
+      "lint": "xo",
+      "precommit": "lint-staged"
+    },
+    "author": "zcong1993 <1005997919@qq.com>",
+    "license": "MIT",
+    "dependencies": {
+      "kcors": "^2.2.1",
+      "koa": "^2.4.1",
+      "koa-helmet": "^3.3.0",
+      "koa-bodyparser": "^4.2.0",
+      "koa-compose": "^4.0.0",
+      "koa-logger": "^3.1.0",
+      "koa-onerror": "^4.0.0",
+      "koa-router": "^7.3.0"
+    },
+    "devDependencies": {,
+      "@zcong/eslint-config-custom": "^0.1.1",
+      "lint-staged": "^6.1.0",
+      "prettier": "^1.10.2",
+      "xo": "^0.18.2"
+    },
+    "xo": {
+      "extends": [
+        "@zcong/eslint-config-custom"
+      ],
+      "envs": ["jest"]
+    },
+    "lint-staged": {
+      "*.{js,json,md}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

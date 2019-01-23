@@ -1,0 +1,172 @@
+{
+  "host": "localhost:3000",
+  "basePath": "/",
+  "info": {
+    "title": "Swagger API",
+    "version": "v0.0.0"
+  },
+  "paths": {
+    "/books/{id}": {
+      "get": {
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "\"ok\"",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Book"
+            }
+          },
+          "404": {
+            "description": "\"not found\""
+          }
+        },
+        "summary": "Get book by id",
+        "description": "Get book by id",
+        "tags": ["books"],
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "book id"
+          }
+        ]
+      },
+      "delete": {
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "responses": {
+          "204": {
+            "description": "\"delete success\""
+          }
+        },
+        "summary": "Get all books",
+        "description": "Get all books",
+        "tags": ["books"],
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "book id"
+          }
+        ]
+      },
+      "put": {
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "responses": {
+          "204": {
+            "description": "\"update success\""
+          }
+        },
+        "summary": "Update new book",
+        "description": "Update new book",
+        "tags": ["books"],
+        "parameters": [
+          {
+            "name": "id",
+            "type": "string",
+            "in": "path",
+            "required": true,
+            "description": "book id"
+          },
+          {
+            "name": "book",
+            "in": "body",
+            "required": true,
+            "description": "new book infomation",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/BookInput"
+            }
+          }
+        ]
+      }
+    },
+    "/books": {
+      "get": {
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "\"ok\"",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Book"
+              }
+            }
+          }
+        },
+        "summary": "Get all books",
+        "description": "Get all books",
+        "tags": ["books"]
+      },
+      "post": {
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "responses": {
+          "201": {
+            "description": "\"create success\""
+          }
+        },
+        "summary": "Create new book",
+        "description": "Create new book",
+        "tags": ["books"],
+        "parameters": [
+          {
+            "name": "book",
+            "in": "body",
+            "required": true,
+            "description": "new book",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/BookInput"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "swagger": "2.0",
+  "definitions": {
+    "Book": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "content": {
+          "type": "string"
+        }
+      },
+      "required": ["id", "title", "price", "content"]
+    },
+    "BookInput": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "content": {
+          "type": "string"
+        }
+      },
+      "required": ["title", "price", "content"]
+    }
+  }
+}
