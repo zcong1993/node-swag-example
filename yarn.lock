@@ -24,10 +24,10 @@
     eslint-plugin-markdown "^1.0.0-beta.6"
     eslint-plugin-prettier "^2.6.0"
 
-"@zcong/swag@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@zcong/swag/-/swag-0.1.4.tgz#d415b6bee6212d7cbfee31e0b93f3f56ac2aa345"
-  integrity sha512-eQoLIK3IkwN9S4UdSt2aI3sdeUorSYXowP0RKWDpeNbC7P45KHWbKVnuQjtW5mf5SsNNH/4kcvjaE7BZNPSWdA==
+"@zcong/swag@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@zcong/swag/-/swag-0.1.5.tgz#2588dc8a5934902a1e75d8a112812ee56757351d"
+  integrity sha512-kjJ8uTpUxinfIUDd7lpven42VbFQtl5UNM6calnNuMJeGw+MCdBTWxgBwzvLMVVqDWK5yLw0u7zJqfKcApB+vw==
   dependencies:
     cac "^6.4.0"
     comment-parser "^0.5.4"

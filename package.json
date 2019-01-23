@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@zcong/eslint-config-custom": "^0.1.1",
-    "@zcong/swag": "^0.1.4",
+    "@zcong/swag": "^0.1.5",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2",
     "xo": "^0.18.2"
